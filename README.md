@@ -5,10 +5,10 @@
     <h1 align="center">FACE RECOGNITION ON DISTRIBUTED SYSTEM USING APACHE SPARK</h1>
 </p>
 <p align="center">
-	<img src="https://img.shields.io/github/license/KhoaLang/Face_Recognition_On_Distributed_System_Using_Apache_Spark?style=flat&color=0080ff" alt="license">
-	<img src="https://img.shields.io/github/last-commit/KhoaLang/Face_Recognition_On_Distributed_System_Using_Apache_Spark?style=flat&logo=git&logoColor=white&color=0080ff" alt="last-commit">
-	<img src="https://img.shields.io/github/languages/top/KhoaLang/Face_Recognition_On_Distributed_System_Using_Apache_Spark?style=flat&color=0080ff" alt="repo-top-language">
-	<img src="https://img.shields.io/github/languages/count/KhoaLang/Face_Recognition_On_Distributed_System_Using_Apache_Spark?style=flat&color=0080ff" alt="repo-language-count">
+	<img src="https://img.shields.io/github/license/KhoaLang/DistributedFaceRecognition?style=flat&color=0080ff" alt="license">
+	<img src="https://img.shields.io/github/last-commit/KhoaLang/DistributedFaceRecognition?style=flat&logo=git&logoColor=white&color=0080ff" alt="last-commit">
+	<img src="https://img.shields.io/github/languages/top/KhoaLang/DistributedFaceRecognition?style=flat&color=0080ff" alt="repo-top-language">
+	<img src="https://img.shields.io/github/languages/count/KhoaLang/DistributedFaceRecognition?style=flat&color=0080ff" alt="repo-language-count">
 <p>
 <p align="center">
 		<em>Developed with the software and tools below.</em>
