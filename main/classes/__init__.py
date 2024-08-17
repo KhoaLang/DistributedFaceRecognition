@@ -1,0 +1,1 @@
+from .face_recog_class import Face_Recog

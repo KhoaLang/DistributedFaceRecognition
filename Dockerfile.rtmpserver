@@ -1,0 +1,24 @@
+FROM ubuntu:20.04
+
+USER root
+
+RUN apt-get -y update && \
+    DEBIAN_FRONTEND=noninteractive TZ=Etc/UTC apt-get -y install ufw ca-certificates\
+    build-essential libpcre3 libpcre3-dev libssl-dev ffmpeg libnginx-mod-rtmp systemctl
+
+RUN echo "deb https://nginx.org/packages/ubuntu/ focal nginx" >> /etc/apt/sources.list
+RUN echo "deb-src https://nginx.org/packages/ubuntu/ focal nginx" >> /etc/apt/sources.list
+
+RUN apt-get -y install nginx
+
+RUN ufw allow 'Nginx HTTP'
+
+COPY ./utils/nginx_config.txt ./
+
+RUN cat ./nginx_config.txt >> /etc/nginx/nginx.conf
+
+RUN ufw allow 1935/tcp
+
+RUN systemctl start nginx
+CMD ["systemctl", "start", "nginx"]
+

@@ -1,0 +1,9 @@
+opencv-contrib-python
+Flask
+face-recognition
+requests==2.27.1
+json5==0.9.6
+pyspark
+ffmpeg-python
+kafka-python==2.0.2
+aiokafka==0.7.1
