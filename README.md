@@ -19,7 +19,6 @@
 	<img src="https://img.shields.io/badge/Python-3776AB.svg?style=flat&logo=Python&logoColor=white" alt="Python">
 	<img src="https://img.shields.io/badge/Docker-2496ED.svg?style=flat&logo=Docker&logoColor=white" alt="Docker">
 	<img src="https://img.shields.io/badge/apachespark-E25A1C.svg?style=flat&logo=apachespark&logoColor=white" alt="Spark">
-	<img src="https://img.shields.io/badge/Flask-000000.svg?style=flat&logo=Flask&logoColor=white" alt="Flask">
 </p>
 <hr>
 
