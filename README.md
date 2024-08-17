@@ -25,14 +25,15 @@
 
 ## Quick Links
 
-> - [Overview](#Overview)
+> - [Overview](#overview)
 > - [Features](#-features)
 > - [Features](#-description)
 > - [Repository Structure](#-repository-structure)
 > - [Modules](#-modules)
 > - [Getting Started](#-getting-started)
 >   - [Installation](#-installation)
->   - [Run the project](#-run-the-project)
+>   - [Run the project locally](#-run-the-project-locally)
+>   - [Cloud hosting](#-cloud-hosting)
 > - [Project Roadmap](#-project-roadmap)
 > - [License](#-license)
 > - [References](#References)
@@ -224,7 +225,7 @@ Note: **The spark master container will have a postfix "master" in container nam
 docker exec -it {container_id} /bin/bash
 ```
 
-### Run the project
+### Run the project locally
 
 #### Prepare the training dataset
 
@@ -258,6 +259,8 @@ python train.py
 
 #### Run:
 
+Put the video that you want to recognize and stream to folder **main/videos_sample/**
+
 Modify the path to the video/stream which you want to run in **main.py**:
 
 ```
@@ -276,6 +279,8 @@ Use the following command to run:
 python main.py
 ```
 
+**ps:** This spark application can only run in **client** mode only in the meantime. The **cluster** mode will be deployed in near future.
+
 #### Watch the stream:
 
 Use another machine in same network to observe the stream.
@@ -289,6 +294,16 @@ With:
 - **streaming_source_ip**: ip of the machine run this project
 
 Open as many VLC windows as the number of videos that you put into the main function.
+
+### Cloud hosting
+
+#### Deploy on EC2
+
+- Do the same as the above instruction.
+- At the **Watch the stream** step.
+  - Do the same
+  - But this time use **Public IPv4 DNS** as the **streaming_source_ip**
+  - And go to the EC2 configuration panel -> Security -> Modify the Inbound rules -> Add Custom TCP rules and set port specific to 1935. This action allow EC2 machine to reponse to the request through 1935 port.
 
 ## Project Roadmap
 

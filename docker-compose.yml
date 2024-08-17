@@ -73,8 +73,8 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
       - ./:/opt/spark/spark_script
     tty: true
-  
-  rtmp-stream-server: 
+
+  rtmp-stream-server:
     container_name: rtmp-server
     build:
       context: .
@@ -88,99 +88,5 @@ services:
       - ./utils:/opt/spark/utils
     tty: true
 
-  # zookeeper:
-  #   image: confluentinc/cp-zookeeper:6.2.0
-  #   container_name: zookeeper
-  #   # networks:
-  #   #   - broker-kafka
-  #   ports:
-  #     - "2181:2181"
-  #   environment:
-  #     ZOOKEEPER_CLIENT_PORT: 2181
-  #     ZOOKEEPER_TICK_TIME: 2000
-
-  # kafka:
-  #   image: confluentinc/cp-kafka:6.2.0
-  #   container_name: kafka
-  #   # networks:
-  #   #   - broker-kafka
-  #   depends_on:
-  #     - zookeeper
-  #   ports:
-  #     - "9092:9092"
-  #     - "9101:9101"
-  #   environment:
-  #     KAFKA_BROKER_ID: 1
-  #     KAFKA_ADVERTISED_HOST_NAME: kafka:9092
-  #     KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
-  #     KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
-  #     KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:29092,PLAINTEXT_HOST://localhost:9092
-  #     KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
-  #     # KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
-  #     # KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
-  #     # KAFKA_CONFLUENT_LICENSE_TOPIC_REPLICATION_FACTOR: 1
-  #     # KAFKA_CONFLUENT_BALANCER_TOPIC_REPLICATION_FACTOR: 1
-  #     # KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
-  #     # KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
-
-  # kafdrop:
-  #   image: obsidiandynamics/kafdrop:3.27.0
-  #   # networks:
-  #   #   - broker-kafka
-  #   depends_on:
-  #     - kafka
-  #     - zookeeper
-  #   ports:
-  #     - 19000:9000
-  #   environment:
-  #     KAFKA_BROKERCONNECT: kafka:29092
-
-  # consumer:
-  #   container_name: consumer
-  #   build:
-  #     context: ./consumers
-  #     dockerfile: Dockerfile
-  #   environment:
-  #     - KAFKA_TOPIC_NAME=streaming
-  #     - KAFKA_SERVER=kafka
-  #     - KAFKA_PORT=29092
-  #   ports:
-  #     - "8001:8001"
-  #     - "9090:9090"
-  #   expose:
-  #     - 9090
-  #   volumes:
-  #     - ./consumers/:/consumers
-  #   depends_on:
-  #     - zookeeper
-  #     - kafka
-  #     - spark-master
-  #   # networks:
-  #   #   - broker-kafka
-  #   tty: true
-
-  # publisher:
-  #   container_name: publisher
-  #   build:
-  #     context: ./main
-  #     dockerfile: Dockerfile
-  #   environment:
-  #     - KAFKA_TOPIC_NAME=topic_test
-  #     - KAFKA_SERVER=kafka
-  #     - KAFKA_PORT=29092
-  #   volumes:
-  #     - ./main:/opt/spark/spark_scripts
-  #   ports:
-  #     - 8000:8000
-  #   restart: "always"
-  #   depends_on:
-  #     - zookeeper
-  #     - kafka
-  #   networks:
-  #     - broker-kafka
-
 volumes:
   spark_script:
-# networks:
-#   broker-kafka:
-#     driver: bridge
