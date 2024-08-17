@@ -38,10 +38,6 @@ class TrainingEntry:
 			rgb_small_frame = small_frame[:, :, ::-1]
 			face_locations = face_recognition.face_locations(rgb_small_frame, model="hog")
 			if face_locations != []:
-				print("Did called if.")
-				# listTemp = face_recognition.face_encodings(frame)
-				# if len(listTemp) == 0: return
-				# face_encoding = listTemp[0]
 				face_encoding = face_recognition.face_encodings(frame)[0]
 				
 				if ref_id in self.embed_dictt:
@@ -78,5 +74,5 @@ class TrainingEntry:
 		
 if __name__ == "__main__":
 	# ****Modiy the train dataset path as you need**** 
-	train_entry = TrainingEntry('../train_dataset/trainning_dataset_Feb29')
+	train_entry = TrainingEntry('../train_dataset')
 	train_entry.execute()

@@ -226,6 +226,18 @@ docker exec -it {container_id} /bin/bash
 
 ### Run the project
 
+#### Prepare the training dataset
+
+Put your desired face dataset in the **train_dataset/** folder
+
+**Remember to change the image name format as those existed images.**
+
+Examples:
+
+    1_trump_10.jpg
+
+Where **1** is the person id and **10** is the number of image of same person.
+
 #### Train (Embeding):
 
 ```sh
