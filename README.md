@@ -41,9 +41,11 @@
 
 ## Overview
 
-- This project demonstrates a distributed face recognition system built using Apache Spark. By leveraging the parallel processing capabilities of Spark, this system can efficiently handle large-scale face recognition tasks, making it suitable for scenarios that require processing vast amounts of video or image data in real-time. The system is containerized using Docker and supports streaming via RTMP, allowing for scalable and flexible deployment across multiple nodes.
+- This project demonstrates a distributed face recognition system built using Apache Spark. By leveraging the parallel processing capabilities of Spark, this system can efficiently handle large-scale face recognition tasks, making it suitable for scenarios that require processing vast amounts of video or image data in real time. The system is containerized using Docker and supports streaming via RTMP, allowing for scalable and flexible deployment across multiple nodes.
 
-- The primary goal of this project was to deploy on an edge device cluster (like Jetson Nano, Raspberry Pi,etc) enhancing both performance and scalability. But the cost of the real devices are not affordable therefore I will just use docker and try to use Kubernetes as Cluster Manager to mimic the behaviour of a physical cluster.
+- The primary goal of this project was to deploy on an edge device cluster (like Jetson Nano, Raspberry Pi, etc) enhancing both performance and scalability. But the cost of the real devices is not affordable therefore I will just use docker and try to use Kubernetes as Cluster Manager to mimic the behavior of a physical cluster.
+
+- The architecture below is a full architecture of my personal project. This repository scope is just cover the flow from 1 -> 2 -> 5.
 
 <p align="center">
 	<img style="display: block; margin: 0 auto" src="https://github.com/KhoaLang/DistributedFaceRecognition/blob/master/utils/readme_materials/architecture.jpg" alt="architecture">
