@@ -68,7 +68,7 @@ The use of the Face Recognition library in this project is for embed the image o
 ## Repository Structure
 
 ```sh
-└── Face_Recognition_On_Distributed_System_Using_Apache_Spark/
+└── DistributedFaceRecognition/
     ├── Dockerfile
     ├── Dockerfile.rtmpserver
     ├── README.md
@@ -119,10 +119,10 @@ The use of the Face Recognition library in this project is for embed the image o
 
 | File                                                                                                                                             | Summary                                                                 |
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------- |
-| [Dockerfile.rtmpserver](https://github.com/KhoaLang/Face_Recognition_On_Distributed_System_Using_Apache_Spark/blob/master/Dockerfile.rtmpserver) | Setting up a RTMP server container for streaming task                   |
-| [docker-compose.yml](https://github.com/KhoaLang/Face_Recognition_On_Distributed_System_Using_Apache_Spark/blob/master/docker-compose.yml)       | Start and mange all the related services                                |
-| [Dockerfile](https://github.com/KhoaLang/Face_Recognition_On_Distributed_System_Using_Apache_Spark/blob/master/Dockerfile)                       | Setting up the main environment with Spark and Face Recognition library |
-| [requirements.txt](https://github.com/KhoaLang/Face_Recognition_On_Distributed_System_Using_Apache_Spark/blob/master/requirements.txt)           | Listed out all the libraries required to run this project               |
+| [Dockerfile.rtmpserver](https://github.com/KhoaLang/DistributedFaceRecognition/blob/master/Dockerfile.rtmpserver) | Setting up a RTMP server container for streaming task                   |
+| [docker-compose.yml](https://github.com/KhoaLang/DistributedFaceRecognition/blob/master/docker-compose.yml)       | Start and mange all the related services                                |
+| [Dockerfile](https://github.com/KhoaLang/DistributedFaceRecognition/blob/master/Dockerfile)                       | Setting up the main environment with Spark and Face Recognition library |
+| [requirements.txt](https://github.com/KhoaLang/DistributedFaceRecognition/blob/master/requirements.txt)           | Listed out all the libraries required to run this project               |
 
 </details>
 
@@ -130,10 +130,10 @@ The use of the Face Recognition library in this project is for embed the image o
 
 | File                                                                                                                                             | Summary                           |
 | ------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------- |
-| [spark-submit.sh](https://github.com/KhoaLang/Face_Recognition_On_Distributed_System_Using_Apache_Spark/blob/master/setup_spark/spark-submit.sh) | Configuring the spark-submit      |
-| [start-master.sh](https://github.com/KhoaLang/Face_Recognition_On_Distributed_System_Using_Apache_Spark/blob/master/setup_spark/start-master.sh) | Configuring the Spark master node |
-| [start-worker.sh](https://github.com/KhoaLang/Face_Recognition_On_Distributed_System_Using_Apache_Spark/blob/master/setup_spark/start-worker.sh) | Configuring the Spark worker node |
-| [start_spark.sh](https://github.com/KhoaLang/Face_Recognition_On_Distributed_System_Using_Apache_Spark/blob/master/setup_spark/start_spark.sh)   | Start spark in overall            |
+| [spark-submit.sh](https://github.com/KhoaLang/DistributedFaceRecognition/blob/master/setup_spark/spark-submit.sh) | Configuring the spark-submit      |
+| [start-master.sh](https://github.com/KhoaLang/DistributedFaceRecognition/blob/master/setup_spark/start-master.sh) | Configuring the Spark master node |
+| [start-worker.sh](https://github.com/KhoaLang/DistributedFaceRecognition/blob/master/setup_spark/start-worker.sh) | Configuring the Spark worker node |
+| [start_spark.sh](https://github.com/KhoaLang/DistributedFaceRecognition/blob/master/setup_spark/start_spark.sh)   | Start spark in overall            |
 
 </details>
 
@@ -141,8 +141,8 @@ The use of the Face Recognition library in this project is for embed the image o
 
 | File                                                                                                                                  | Summary                                                |
 | ------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------ |
-| [main.py](https://github.com/KhoaLang/Face_Recognition_On_Distributed_System_Using_Apache_Spark/blob/master/main/main.py)             | Start the streaming process as well as the recognition |
-| [get_config.py](https://github.com/KhoaLang/Face_Recognition_On_Distributed_System_Using_Apache_Spark/blob/master/main/get_config.py) | Get the spark config                                   |
+| [main.py](https://github.com/KhoaLang/DistributedFaceRecognition/blob/master/main/main.py)             | Start the streaming process as well as the recognition |
+| [get_config.py](https://github.com/KhoaLang/DistributedFaceRecognition/blob/master/main/get_config.py) | Get the spark config                                   |
 
 </details>
 
@@ -150,7 +150,7 @@ The use of the Face Recognition library in this project is for embed the image o
 
 | File                                                                                                                                                      | Summary                                                     |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- |
-| [face_recog_class.py](https://github.com/KhoaLang/Face_Recognition_On_Distributed_System_Using_Apache_Spark/blob/master/main/classes/face_recog_class.py) | Define the face recognition behaviour in this project scope |
+| [face_recog_class.py](https://github.com/KhoaLang/DistributedFaceRecognition/blob/master/main/classes/face_recog_class.py) | Define the face recognition behaviour in this project scope |
 
 </details>
 
@@ -158,8 +158,8 @@ The use of the Face Recognition library in this project is for embed the image o
 
 | File                                                                                                                                            | Summary                     |
 | ----------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------- |
-| [config_spark.txt](https://github.com/KhoaLang/Face_Recognition_On_Distributed_System_Using_Apache_Spark/blob/master/main/log/config_spark.txt) | output of the get_config.py |
-| [frames_shape.txt](https://github.com/KhoaLang/Face_Recognition_On_Distributed_System_Using_Apache_Spark/blob/master/main/log/frames_shape.txt) | Shape of a frame/image      |
+| [config_spark.txt](https://github.com/KhoaLang/DistributedFaceRecognition/blob/master/main/log/config_spark.txt) | output of the get_config.py |
+| [frames_shape.txt](https://github.com/KhoaLang/DistributedFaceRecognition/blob/master/main/log/frames_shape.txt) | Shape of a frame/image      |
 
 </details>
 
@@ -167,7 +167,7 @@ The use of the Face Recognition library in this project is for embed the image o
 
 | File                                                                                                                                         | Summary                                 |
 | -------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------- |
-| [nginx_config.txt](https://github.com/KhoaLang/Face_Recognition_On_Distributed_System_Using_Apache_Spark/blob/master/utils/nginx_config.txt) | nginx configuration for the RMPT Server |
+| [nginx_config.txt](https://github.com/KhoaLang/DistributedFaceRecognition/blob/master/utils/nginx_config.txt) | nginx configuration for the RMPT Server |
 
 </details>
 
@@ -186,16 +186,16 @@ Ensure you have the following dependencies installed on your system:
 
 ### Setting up
 
-1. Clone the Face_Recognition_On_Distributed_System_Using_Apache_Spark repository:
+1. Clone the DistributedFaceRecognition repository:
 
 ```sh
-git clone https://github.com/KhoaLang/Face_Recognition_On_Distributed_System_Using_Apache_Spark
+git clone https://github.com/KhoaLang/DistributedFaceRecognition
 ```
 
 2. Change to the project directory:
 
 ```sh
-cd Face_Recognition_On_Distributed_System_Using_Apache_Spark
+cd DistributedFaceRecognition
 ```
 
 3. Launch docker containers with docker compose:
@@ -241,7 +241,7 @@ Where **1** is the person id and **10** is the number of image of same person.
 #### Train (Embeding):
 
 ```sh
-cd ../spark_script/Face_Recognition_On_Distributed_System_Using_Apache_Spark/main
+cd ../spark_script/DistributedFaceRecognition/main
 ```
 
 1. Modify the train/embeding dataset as you need in **main/train.py**
