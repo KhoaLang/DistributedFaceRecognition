@@ -45,6 +45,8 @@
 
 - The primary goal of this project was to deploy on an edge device cluster (like Jetson Nano, Raspberry Pi,etc) enhancing both performance and scalability. But the cost of the real devices are not affordable therefore I will just use docker and try to use Kubernetes as Cluster Manager to mimic the behaviour of a physical cluster.
 
+<img src="https://github.com/KhoaLang/DistributedFaceRecognition/blob/master/utils/readme_materials/architecture.jpg" alt="architecture">
+
 ## Features
 
 - Distributed Processing with Apache Spark: Utilizes Apache Spark to distribute the face recognition workload across multiple nodes, enabling efficient processing of large datasets.
