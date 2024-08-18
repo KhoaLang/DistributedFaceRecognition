@@ -45,9 +45,9 @@
 
 - The primary goal of this project was to deploy on an edge device cluster (like Jetson Nano, Raspberry Pi,etc) enhancing both performance and scalability. But the cost of the real devices are not affordable therefore I will just use docker and try to use Kubernetes as Cluster Manager to mimic the behaviour of a physical cluster.
 
-<img width="800" 
-        height="600" 
-        style="display: block; margin: 0 auto" src="https://github.com/KhoaLang/DistributedFaceRecognition/blob/master/utils/readme_materials/architecture.jpg" alt="architecture">
+<p align="center">
+	<img style="display: block; margin: 0 auto" src="https://github.com/KhoaLang/DistributedFaceRecognition/blob/master/utils/readme_materials/architecture.jpg" alt="architecture">
+</p>
 
 ## Features
 
